@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.8"
+  },
+  "dependencies": {
+    "@nuxtjs/composition-api": "^0.33.1",
+    "@pinia/nuxt": "^0.4.1",
+    "augmented-ui": "^2.0.0",
+    "gsap": "^3.11.0",
+    "multiple.js": "^0.0.1",
+    "pinia": "^2.0.21",
+    "vue3-smooth-scroll": "^0.8.1"
+  }
+}
