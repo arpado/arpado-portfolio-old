@@ -3,7 +3,7 @@
         "name": "King's Landing Page",
         "description": "A simple static landing page for the fictional city of Westeros. Contains a hero section with CTA, a simple contact form with adress, open hours and a map, testimonials and two sections about the hostory and sights of the place. Fully reponsible site with no back-end code.",
         "image": "webpages/kings-landing-page.jpg",
-        "thumbnail": "/webpages/kings-landing-page-thumbnail.jpg",
+        "thumbnail": "images/webpages/kings-landing-page-thumbnail.jpg",
         "size": "6.846.101 bytes",
         "date": "2022. 08. 06.",
         "modified": "2022. 08. 06.",
