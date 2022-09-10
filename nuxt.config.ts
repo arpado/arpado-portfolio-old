@@ -4,4 +4,5 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
     modules: ['@pinia/nuxt'],
     css: ['@/assets/fonts/orbitron/orbitron.css'],
+    "target": "static",
 })
