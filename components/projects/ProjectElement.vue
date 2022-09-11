@@ -6,7 +6,7 @@
     v-if="content.name !== 'No Title'"
   >
     <div class="img-container">
-      <img :src="`~/public/images/${content.thumbnail}`" alt="" />
+      <img :src="getPics" alt="" />
     </div>
 
     <div>
@@ -29,6 +29,7 @@
 
 <script>
 // projectImage(content.image)
+// require(`~/public/images/${content.thumbnail}`)
 import { useMainStore } from "@/stores/MainStore.js";
 export default {
   props: ["content"],
@@ -36,6 +37,11 @@ export default {
   setup() {
     const mainStore = useMainStore();
     return { mainStore };
+  },
+  computed: {
+    getPics() {
+      return `/public/images/${content.thumbnail}`;
+    }
   },
 };
 </script>
