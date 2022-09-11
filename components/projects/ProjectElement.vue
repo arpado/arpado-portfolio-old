@@ -6,7 +6,7 @@
     v-if="content.name !== 'No Title'"
   >
     <div class="img-container">
-      <img :src="require(`~/public/images/${content.thumbnail}`)" alt="" />
+      <img :src="getPics" alt="" />
     </div>
 
     <div>
@@ -32,11 +32,21 @@
 // require(`~/public/images/${content.thumbnail}`)
 import { useMainStore } from "@/stores/MainStore.js";
 export default {
+  // data() {
+  //   return {
+  //     content: this.content,
+  //   }
+  // },
   props: ["content"],
   emits: ["openModal"],
   setup() {
     const mainStore = useMainStore();
     return { mainStore };
+  },
+  computed: {
+    getPics() {
+      return require(`/public/images/${this.content.thumbnail}`);
+    }
   },
 };
 </script>
