@@ -106,7 +106,7 @@ export default {
   },
   computed: {
     getPic() {
-      return "/assets/images/" + mainStore.modalContent.image
+      return "/assets/images/" + this.mainStore.modalContent.image
     }
   },
   mounted() {
