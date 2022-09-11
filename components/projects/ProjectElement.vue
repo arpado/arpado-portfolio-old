@@ -32,6 +32,11 @@
 // require(`~/public/images/${content.thumbnail}`)
 import { useMainStore } from "@/stores/MainStore.js";
 export default {
+  data() {
+    return {
+      content: this.content,
+    }
+  },
   props: ["content"],
   emits: ["openModal"],
   setup() {
