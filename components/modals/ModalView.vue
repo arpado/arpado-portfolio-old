@@ -17,7 +17,7 @@
           </div>
           <div class="project-image">
             <img
-              :src="`/assets/images/${mainStore.modalContent.image}`"
+              :src="getPic"
               :alt="`Preview of ${mainStore.modalContent.name}`"
               v-if="mainStore.modalContent.image"
             />
@@ -103,6 +103,11 @@ export default {
         );
       }
     },
+  },
+  computed: {
+    getPic() {
+      return "/assets/images/" + mainStore.modalContent.image
+    }
   },
   mounted() {
     document.addEventListener("keydown", this.mainStore.closeModalOnEscape);
