@@ -6,7 +6,7 @@
     v-if="content.name !== 'No Title'"
   >
     <div class="img-container">
-      <img :src="`assets/images/${content.thumbnail}`" alt="" />
+      <img :src="`/assets/images/${content.thumbnail}`" alt="" />
     </div>
 
     <div>
