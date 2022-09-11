@@ -30,11 +30,17 @@
 <script>
 // projectImage(content.image)
 // require(`~/public/images/${content.thumbnail}`)
-import { useMainStore } from "@/stores/MainStore.js";
+import { useMainStore } from "@/stores/MainStore.js"
+// import pic from `@/public/images/${this.content.thumbnail}`
+// let path = this.content.thumbnail
+// console.log(path)
+// import pic from path
+
+
 export default {
   // data() {
   //   return {
-  //     content: this.content,
+  //     image: this.content.thumbnail,
   //   }
   // },
   props: ["content"],
@@ -43,9 +49,12 @@ export default {
     const mainStore = useMainStore();
     return { mainStore };
   },
+  // mounted() {
+  //   this.imgUrl = new URL(`~/public/images/${this.content.thumbnail}`)
+  // },
   computed: {
     getPics() {
-      return require(`/public/images/${this.content.thumbnail}`);
+      return "/images/" + this.content.thumbnail;
     }
   },
 };
