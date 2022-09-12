@@ -2,7 +2,10 @@
   <transition>
     <NuxtLayout
       name="footer-console"
-      :class="{ hidden: footerHidden, 'static-effect' : mainStore.staticEffectActive }"
+      :class="{
+        hidden: footerHidden,
+        'static-effect': mainStore.staticEffectActive,
+      }"
       class="footer-container"
       ref="footerContainer"
     >
@@ -16,18 +19,30 @@
         </div>
       </div>
       <div class="footer-text">
-        <div class="page-structure">
+        <div class="text-container">
           <h3>Navigation</h3>
-          <a href="#hero">Hero</a>
-          <a href="#projects">Projects</a>
-          <a href="#contacts">About</a>
-          <a href="#contacts">Contacts</a>
+          <div class="links-container">
+            <a href="#hero">Hero</a>
+            <a href="#projects">Projects</a>
+            <a href="#contacts">About</a>
+            <a href="#contacts">Contacts</a>
+          </div>
         </div>
-        <div class="libraries-used">
-          <p>Boxes shaped with <a href="">Augmented UI</a></p>
-          <p>Message form is powered by <a href="">SOMETHING</a></p>
-          <p>Static effect is made by THIS GUY</p>
-          <p class="copyright">Page made by Arpad O. copyright 2022</p>
+        <div class="text-container">
+          <h3>Assets</h3>
+          <div class="libraries-used">
+            <div>
+              <p>
+                Boxes shaped with
+                <a href="https://augmented-ui.com/">Augmented UI</a>. Message
+                form is powered by
+                <a href="https://formsubmit.co/">FormSubmit</a>. Static effect
+                is made by
+                <a href="https://codepen.io/farisk/pen/GMqvRV">faris k</a>.
+              </p>
+              <p class="copyright">Page made by Arpad O. Copyright 2022</p>
+            </div>
+          </div>
         </div>
       </div>
     </NuxtLayout>
@@ -35,12 +50,12 @@
 </template>
 
 <script>
-import {useMainStore} from '../../stores/MainStore.js';
+import { useMainStore } from "../../stores/MainStore.js";
 
 export default {
   setup() {
     const mainStore = useMainStore();
-    return { mainStore }
+    return { mainStore };
   },
   data() {
     return {
@@ -60,7 +75,7 @@ export default {
 <style scoped>
 .footer-container {
   width: 100%;
-  height: 20%;
+  height: fit-content;
   bottom: 0%;
   left: 0;
   transition: all 0.5s linear;
@@ -100,16 +115,24 @@ export default {
   justify-content: space-evenly;
   gap: 1rem;
 }
-.page-structure {
+.text-container {
   display: flex;
   flex-direction: column;
 }
+.links-container,
 .libraries-used {
+  display: flex;
+  flex-direction: column;
   font-size: 0.75rem;
 }
+.links-container > a {
+  margin: 10px 10px 10px 0;
+}
 @media (min-width: 600px) {
+  .links-container,
   .libraries-used {
     font-size: inherit;
+    flex-direction: row;
   }
 }
 </style>
