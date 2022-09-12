@@ -1,6 +1,10 @@
 <template>
   <section class="section-1" id="hero">
-    <NuxtLayout name="console-one" class="hero-outer" :class="{'static-effect' : mainStore.staticEffectActive }">
+    <NuxtLayout
+      name="console-one"
+      class="hero-outer"
+      :class="{ 'static-effect': mainStore.staticEffectActive }"
+    >
       <div class="text-container">
         <h1>Hello, my name is Arpad</h1>
         <div class="intro-text">
@@ -10,7 +14,6 @@
           </p>
         </div>
       </div>
-      <!-- kompetenciak felsorolasa -->
       <div class="competences-container">
         <NuxtLayout name="textbox-one">HTML</NuxtLayout>
         <NuxtLayout name="textbox-one">CSS</NuxtLayout>
@@ -33,11 +36,11 @@ export default {
   data() {
     return {
       wordsToType: [
-        "JavaScript programmer",
-        "Nuxt3 coder",
-        "Vue3 web developer",
+        "programmer",
+        "coder",
+        "web developer",
         "software engineer",
-        "CSS web designer",
+        "web designer",
       ],
       speed: 125,
       counter: 0,
@@ -87,7 +90,7 @@ export default {
   },
   mounted() {
     this.mainStore.setRandomStaticEffect();
-  }
+  },
 };
 </script>
 
@@ -95,8 +98,6 @@ export default {
 .section-1 {
   width: 100%;
   height: 100vh;
-  /* background-image: url('https://cutewallpaper.org/25/animated-cyberpunk-wallpaper-gif/cyberpunk-b72ea-city-31833-steam-8376b-background-756c9-gif.gif'); */
-  /* background-image: url('https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg'); */
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -164,8 +165,8 @@ export default {
 }
 @media (min-width: 1000px) {
   .hero-outer {
-  margin: 0 5vw 10vh 5vw;
-  max-width: 1000px;
+    margin: 0 5vw 10vh 5vw;
+    max-width: 1000px;
   }
 }
 </style>
