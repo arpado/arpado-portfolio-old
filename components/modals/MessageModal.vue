@@ -1,10 +1,18 @@
 <template>
   <transition name="modalanimation" :duration="300">
-    <div class="modal-container" v-if="mainStore.showMessage" @click="mainStore.closeOnOutsideClick">
-      <NuxtLayout name="console-one" class="main-console" :class="{'static-effect' : mainStore.staticEffectActive }">
+    <div
+      class="modal-container"
+      v-if="mainStore.showMessage"
+      @click="mainStore.closeOnOutsideClick"
+    >
+      <NuxtLayout
+        name="console-one"
+        class="main-console"
+        :class="{ 'static-effect': mainStore.staticEffectActive }"
+      >
         <div class="modal-content-box">
           <div class="modal-message">
-              <p>{{ mainStore.modalMessage }}</p>
+            <p>{{ mainStore.modalMessage }}</p>
           </div>
           <div
             class="modal-close"
@@ -29,13 +37,6 @@ export default {
     const mainStore = useMainStore();
     return { mainStore };
   },
-  methods: {
-    // closeModalOnEscape(e) {
-    //   if (e.keyCode == 27) {
-    //     this.mainStore.closeModal();
-    //   }
-    // },
-  },
   mounted() {
     document.addEventListener("keydown", this.mainStore.closeModalOnEscape);
   },
@@ -52,18 +53,16 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  /* color: white; */
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s linear;
-  /* font-size: 0.75rem; */
 }
 .main-console {
-  width: 300px;
-  height: 200px;
+  width: fit-content;
+  height: fit-content;
   transition: all 0.3s linear;
   transition-delay: 0.3s;
 }
@@ -71,7 +70,7 @@ export default {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
@@ -91,6 +90,9 @@ export default {
   grid-row: 1/2;
   grid-column: 3/4;
   font-family: monospace;
+  --aug-inlay-opacity: 0.9;
+  --aug-inlay-bg: black;
+  --aug-inlay-all: 0px;
 }
 .modal-close:hover {
   cursor: pointer;
@@ -105,14 +107,5 @@ export default {
 .modalanimation-enter-from,
 .modalanimation-leave-to {
   opacity: 0;
-}
-@media (min-width: 600px) {
-  /* .modal-container {
-    font-size: 1rem;
-  } 
-  .main-console {
-    width: 80%;
-    height: 80%;
-  }*/
 }
 </style>
