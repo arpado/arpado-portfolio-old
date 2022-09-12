@@ -3,15 +3,14 @@
     class="wrapper nav-btn"
     data-augmented-ui="
   tl-clip tr-clip br-clip bl-clip both"
-  :style="{ gridArea: `${button.name}`, left: `${(index * 33)}%`}"
-  @click="$emit('emitChangeSubPage', button.subPage)"
+    :style="{ gridArea: `${button.name}`, left: `${index * 33}%` }"
+    @click="$emit('emitChangeSubPage', button.subPage)"
   >
     <p>{{ button.name }}</p>
   </div>
 </template>
 
 <script>
-    // :style="{ right: `${btnArrayLength - index * 170 + 410}px` }"
 export default {
   name: "ProjectItemHor",
   props: ["button", "index"],
@@ -38,11 +37,11 @@ export default {
   --aug-inlay-all: 0px;
 }
 .wrapper:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 @media (min-width: 550px) {
   .wrapper {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
 </style>
