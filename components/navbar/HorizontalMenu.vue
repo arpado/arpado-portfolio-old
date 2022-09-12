@@ -22,13 +22,13 @@
   tl-clip tr-clip br-clip bl-clip both"
       @click="toggleMenu"
     >
-    <span class="wrap">
-            <div
-        class="triangle"
-        data-augmented-ui="all-triangle-right border"
-        :class="{ 'arrow-rotated': menuVisible }"
-      ></div>
-    </span>
+      <span class="wrap">
+        <div
+          class="triangle"
+          data-augmented-ui="all-triangle-right border"
+          :class="{ 'arrow-rotated': menuVisible }"
+        ></div>
+      </span>
     </div>
   </div>
 </template>
@@ -115,13 +115,16 @@ export default {
 .btn-toggle-menu > .wrap > :only-child {
   transition: all 1s cubic-bezier(0.54, 0.54, 0.54, 0.54);
 }
+.btn-toggle-menu:hover {
+  cursor: pointer;
+}
 .arrow-rotated {
   transform: rotateY(180deg);
 }
 .nav-btn {
   --aug-inlay-opacity: 0.9;
-    --aug-inlay-bg: black;
-    --aug-inlay-all: 0px;
+  --aug-inlay-bg: black;
+  --aug-inlay-all: 0px;
 }
 .wrap {
   filter: drop-shadow(0 0 10px white);
