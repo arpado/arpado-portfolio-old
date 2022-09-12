@@ -1,58 +1,79 @@
 [
     {
-        "name": "Utility-1",
+        "name": "No Title",
         "description": "No description.",
         "image": "",
+        "thumbnail": "",
         "size": "0 kB",
         "date": "1970. 01. 01.",
-        "language": ""
+        "modified": "1970. 01. 01.",
+        "language": "",
+        "link": ""
     },
     {
-        "name": "Utility-2",
-        "description": "No description.",
-        "image": "",
-        "size": "0 kB",
-        "date": "1970. 01. 01.",
-        "language": ""
+        "name": "Catan Dice Tracker and Chance Calculator",
+        "description": "'What was the chance of rolling snake-eyes 5 times during the game?' 'There were less eights than fives during tha match!' 'We have barely had any sevens!' 'I've lost because of bad dicerolls!' No more of these excuses if your using the dice tracker! With this app you can track the dicerolls and compare them to the statistically ideal outcome.",
+        "image": "utilities/catan.jpg",
+        "thumbnail": "utilities/catan-thumbnail.jpg",
+        "size": "332.781 bytes",
+        "date": "2021. 04. 16.",
+        "modified": "2022. 03. 02.",
+        "language": "HTML-CSS-JS",
+        "link": ""
     },
     {
-        "name": "Utility-3",
-        "description": "No description.",
-        "image": "",
+        "name": "Ceasars Cypher",
+        "description": "One of the earliest methods to encrypt a message. Type in the input field to add text, click on the rotate buttons to encrypt. The num in the middle shows by how many characters the encrypted chars are shifted.",
+        "image": "utilities/ceasars-cypher.jpg",
+        "thumbnail": "utilities/ceasars-cypher-thumbnail.jpg",
         "size": "0 kB",
-        "date": "1970. 01. 01.",
-        "language": ""
+        "date": "2022. 03. 21.",
+        "modified": "2022. 03. 30.",
+        "language": "VUE 3",
+        "link": ""
     },
     {
-        "name": "Utility-4",
-        "description": "No description.",
-        "image": "",
-        "size": "0 kB",
-        "date": "1970. 01. 01.",
-        "language": ""
+        "name": "Pokemon Randomizer",
+        "description": "This page is basicly a simple, random API request from the PokemonAPI for a picture and a name of a radnom pokemon. Project will be expanded at a later date.",
+        "image": "utilities/pokemon-randomizer.jpg",
+        "thumbnail": "utilities/pokemon-randomizer-thumbnail.jpg",
+        "size": "976.981 bytes",
+        "date": "2022. 02. 16.",
+        "modified": "2022. 02. 17.",
+        "language": "HTML-CSS-JS",
+        "link": ""
     },
     {
-        "name": "Utility-5",
+        "name": "No Title",
         "description": "No description.",
         "image": "",
+        "thumbnail": "",
         "size": "0 kB",
         "date": "1970. 01. 01.",
-        "language": ""
+        "modified": "1970. 01. 01.",
+        "language": "",
+        "link": ""
     },
     {
-        "name": "Utility-6",
-        "description": "No description.",
-        "image": "",
-        "size": "0 kB",
-        "date": "1970. 01. 01.",
-        "language": ""
+        "name": "Texture Maker",
+        "description": "A simple app for making textures by rotating and flipping one or more smaller tile image(s). Replace them with drag-and-drop. Preview and download texture.",
+        "image": "utilities/texture-maker.jpg",
+        "thumbnail": "utilities/texture-maker-thumbnail.jpg",
+        "size": "0 bytes",
+        "date": "2022. 05. 07.",
+        "modified": "2022. 06. 20.",
+        "language": "VUE 3",
+        "link": ""
     },
     {
-        "name": "Utility-7",
-        "description": "No description.",
-        "image": "",
+        "name": "Word Highlighter",
+        "description": "A project made for a friend to help him teach grammar to his student in a more effective manner. Input sentence, set boxes around the words and then set diffenrent background colors on them via a dropdown menu by clicking on them in order to mark them as belonging together.",
+        "image": "utilities/wordhighlighter.jpg",
+        "thumbnail": "utilities/wordhighlighter-thumbnail.jpg",
         "size": "0 kB",
-        "date": "1970. 01. 01.",
-        "language": ""
+        "date": "2022. 01. 05.",
+        "modified": "2022. 01. 25.",
+        "language": "HTML-CSS-JS",
+        "link": ""
     }
 ]

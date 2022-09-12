@@ -1,58 +1,79 @@
 [
     {
-        "name": "Game-1",
-        "description": "No description.",
-        "image": "",
-        "size": "0 kB",
-        "date": "1970. 01. 01.",
-        "language": ""
+        "name": "Rock-Paper-Scissors-Lizard-Spock",
+        "description": "A variant of Ro-Shim-Bo. Click on the token to select it. Can be played by two human players, hot-seat, player2 during the oppoents turn may wish to turn his/her head to avoid seeing what player1 picks.",
+        "image": "games/rock-paper-scissors-lizard-spock.jpg",
+        "thumbnail": "games/rock-paper-scissors-lizard-spock-thumbnail.jpg",
+        "size": "1.116.705 bytes",
+        "date": "2022. 05. 08.",
+        "modified": "2022. 09. 01.",
+        "language": "HTML-CSS-JS",
+        "link": ""
     },
     {
-        "name": "Game-2",
+        "name": "No Title",
         "description": "No description.",
         "image": "",
+        "thumbnail": "",
         "size": "0 kB",
         "date": "1970. 01. 01.",
-        "language": ""
+        "modified": "1970. 01. 01.",
+        "language": "",
+        "link": ""
     },
     {
-        "name": "Game-3",
-        "description": "No description.",
-        "image": "",
-        "size": "0 kB",
-        "date": "1970. 01. 01.",
-        "language": ""
+        "name": "Memory Cards",
+        "description": "Simple memory cards game. Will be redone.",
+        "image": "games/memorygame.jpg",
+        "thumbnail": "games/memorygame-thumbnail.jpg",
+        "size": "9.337 bytes",
+        "date": "2021. 11. 23.",
+        "modified": "2021. 11. 23.",
+        "language": "HTML-CSS-JS",
+        "link": ""
     },
     {
-        "name": "Game-4",
-        "description": "No description.",
-        "image": "",
-        "size": "0 kB",
-        "date": "1970. 01. 01.",
-        "language": ""
+        "name": "Matter JS demo",
+        "description": "This is a dip into the MatterJS library. May be expanded at a later time.",
+        "image": "games/matter-js-demo.jpg",
+        "thumbnail": "games/matter-js-demo-thumbnail.jpg",
+        "size": "1.604 bytes",
+        "date": "2021. 12. 22.",
+        "modified": "2021. 12. 22.",
+        "language": "HTML-JS",
+        "link": ""
     },
     {
-        "name": "Game-5",
+        "name": "No Title",
         "description": "No description.",
         "image": "",
+        "thumbnail": "",
         "size": "0 kB",
         "date": "1970. 01. 01.",
-        "language": ""
+        "modified": "1970. 01. 01.",
+        "language": "",
+        "link": ""
     },
     {
-        "name": "Game-6",
+        "name": "No Title",
         "description": "No description.",
         "image": "",
+        "thumbnail": "",
         "size": "0 kB",
         "date": "1970. 01. 01.",
-        "language": ""
+        "modified": "1970. 01. 01.",
+        "language": "",
+        "link": ""
     },
     {
-        "name": "Game-7",
+        "name": "No Title",
         "description": "No description.",
         "image": "",
+        "thumbnail": "",
         "size": "0 kB",
         "date": "1970. 01. 01.",
-        "language": ""
+        "modified": "1970. 01. 01.",
+        "language": "",
+        "link": ""
     }
 ]
