@@ -15,8 +15,7 @@ export default {};
 
 <style scoped>
 .container {
-  padding: 1rem 50px 0.5rem 1rem;
-  font-size: 1rem;
+  padding: 1rem 50px 1rem 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -26,6 +25,6 @@ export default {};
   --aug-inlay-bg: var(--darkGreen);
   --aug-inlay-opacity: 0.7;
   --aug-br-inset1: 30px;
-  --aug-br-inset2: 50px;
+  --aug-br-inset2: 20%;
 }
 </style>
