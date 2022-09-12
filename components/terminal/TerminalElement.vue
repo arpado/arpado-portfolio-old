@@ -1,20 +1,43 @@
 <template>
   <div
     class="console-container"
-    :class="{ hidden: terminalHidden, 'static-effect' : mainStore.staticEffectActive }"
+    :class="{
+      hidden: terminalHidden,
+      'static-effect': mainStore.staticEffectActive,
+    }"
     data-augmented-ui="
   tl-2-clip-x tr-clip br-2-clip-y bl-clip-inset both
 "
   >
     <p>This is the terminal</p>
-    <p>{{ scrollPos }}</p>
-    <p>{{ windowHeight }}</p>
-    <p>{{ scrollPerc.toFixed(2) }} %</p>
+    <hr />
+    <div class="text-container">
+      <div class="text-column">
+        <div class="text-item">
+          <p>Window Height</p>
+          <p>{{ mainStore.windowHeight }} px</p>
+        </div>
+        <div class="text-item">
+          <p>Window Width</p>
+          <p>{{ mainStore.windowWidth }} px</p>
+        </div>
+        <div class="text-item">
+          <p>Scroll Position</p>
+          <p>{{ mainStore.scrollPos.toFixed(2) }} px</p>
+        </div>
+        <div class="text-item">
+          <p>Scroll Progress</p>
+          <p>{{ mainStore.getScrollPercent.toFixed(2) }} %</p>
+        </div>
+      </div>
+      <!-- <div class="text-column"></div> -->
+    </div>
+
     <p>{{ mainStore.showModal }}</p>
     <div class="btn-toggle-terminal terminal-btn" @click="toggleTerminal">
       <div class="wrap">
         <div
-          data-augmented-ui="all-triangle-left border"
+          data-augmented-ui="all-triangle-right border"
           class="arrow"
           :class="{ 'arrow-rotated': arrowRotated }"
         ></div>
@@ -27,14 +50,13 @@
 import { useMainStore } from "../../stores/MainStore.js";
 
 export default {
-  props: ["scrollPos", "windowHeight", "scrollPerc"],
   setup() {
     const mainStore = useMainStore();
     return { mainStore };
   },
   data() {
     return {
-      terminalHidden: false,
+      terminalHidden: true,
       arrowRotated: false,
     };
   },
@@ -86,5 +108,24 @@ export default {
 }
 .wrap {
   filter: drop-shadow(0 0 10px white);
+}
+.text-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.text-column {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.text-item {
+  display: flex;
+  justify-content: space-between;
+}
+hr {
+  margin: 10px;
 }
 </style>
