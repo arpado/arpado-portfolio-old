@@ -91,6 +91,7 @@ select:-webkit-autofill:focus {
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #1b1b1b inset !important;
   -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
   -webkit-text-fill-color: white !important;
 }
