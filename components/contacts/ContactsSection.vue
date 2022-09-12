@@ -34,6 +34,7 @@ export default {};
   .contacts {
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: stretch;
   }
   .contacts > * {
     width: 45%;
