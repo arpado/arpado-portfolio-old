@@ -62,9 +62,6 @@ export default {
     },
     enter(el) {
       el.style.transform = `translateY(-${el.dataset.index * 100 + 160}px)`;
-      // let after = window.getComputedStyle(el,':after');
-      // let content = after['']
-      // nem lehet az aftert modositani
     },
     afterEnter(el, done) {
       gsap.to(el, {
@@ -107,6 +104,9 @@ export default {
   right: 0;
   --aug-bl-inset2: 30%;
   --aug-br-inset1: 30%;
+}
+.btn-toggle-menu:hover {
+  cursor: pointer;
 }
 .btn-toggle-menu> .wrap > :only-child {
   transition: all 1s cubic-bezier(0.54, 0.54, 0.54, 0.54);
