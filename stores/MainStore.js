@@ -3,11 +3,15 @@ import { defineStore } from "pinia";
 export const useMainStore = defineStore('MainStore', {
     state: () => {
         return {
+            windowWidth: null,
+            windowHeight: null,
+            pageHeight: 0,
+            scrollPos: 0,
             showModal: false,
             modalContent: null,
-            staticEffectActive: false,
             showMessage: false,
             modalMessage: '',
+            staticEffectActive: false,
         }
     },
     actions: {
@@ -57,8 +61,17 @@ export const useMainStore = defineStore('MainStore', {
                 }, shortTimeOut);
             }, longTimerOut);
         },
+        getPositionOnScroll() {
+            this.scrollPos = window.top.scrollY;
+            /* or: e.target.documentElement.scrollTop */
+        },
         test() {
             console.log('poop')
         }
+    },
+    getters: {
+        getScrollPercent() {
+            return (this.scrollPos / (this.pageHeight - this.windowHeight)) * 100;
+        },
     }
 })
