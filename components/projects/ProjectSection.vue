@@ -1,6 +1,9 @@
 <template>
   <section class="projects-container" id="projects">
-    <div class="horizontal-project-navigation" v-if="windowWidth <= 1100">
+    <div
+      class="horizontal-project-navigation"
+      v-if="mainStore.windowWidth <= 1100"
+    >
       <ProjectsProjectButtonHorizontal
         v-for="(button, index) in buttons"
         :key="index"
@@ -9,7 +12,10 @@
         @emitChangeSubPage="changeSubPage"
       />
     </div>
-    <div class="vertical-projecct-navigation" v-if="windowWidth > 1100">
+    <div
+      class="vertical-projecct-navigation"
+      v-if="mainStore.windowWidth > 1100"
+    >
       <ProjectsProjectButtonVertical
         v-for="(button, index) in buttons"
         :key="index"
@@ -36,9 +42,13 @@
 import webpagesContent from "@/content/webpages.json";
 import gamesContent from "@/content/games.json";
 import utilitiesContent from "@/content/utilities.json";
+import { useMainStore } from "@/stores/MainStore.js";
 
 export default {
-  props: ["windowWidth"],
+  setup() {
+    const mainStore = useMainStore();
+    return { mainStore };
+  },
   data() {
     return {
       buttons: [
