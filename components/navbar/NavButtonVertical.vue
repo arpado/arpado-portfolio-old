@@ -12,7 +12,6 @@
 </template>
 
 <script>
-// :style="{ transform: `translateY(${index * 100 + 50}px)` }"
 export default {
   name: "DropdownItem",
   props: ["button", "index"],
