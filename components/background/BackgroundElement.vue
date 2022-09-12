@@ -36,6 +36,7 @@ export default {
   height: 1000px;
   width: 1000px;
   animation: bg-animation 600s infinite linear;
+  overflow: hidden;
 }
 .galaxy-container::after {
   position: absolute;
