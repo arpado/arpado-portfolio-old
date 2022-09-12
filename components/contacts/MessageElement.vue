@@ -2,7 +2,7 @@
   <div
     class="message-container"
     data-augmented-ui="
-  tl-clip tr-2-clip-y br-clip b-clip-y l-clip-y both
+  tl-clip tr-2-clip-y br-clip l-clip-y both
 "
   >
     <h3 class="title">Do you have questons?</h3>
