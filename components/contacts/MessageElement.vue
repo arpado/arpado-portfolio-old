@@ -106,6 +106,7 @@ select:-webkit-autofill {
   --aug-inlay-opacity: 0.7;
   --aug-tr-extend2: 30%;
   --aug-l-extend1: 30%;
+  overflow: hidden;
 }
 .title {
   grid-row: 1/2;
