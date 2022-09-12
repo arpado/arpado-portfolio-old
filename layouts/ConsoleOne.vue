@@ -29,7 +29,7 @@ export default {};
   padding: 2rem;
   position: relative;
   flex-direction: column;
-   --aug-inlay-bg: var(--darkGreen);
+  --aug-inlay-bg: var(--darkGreen);
   --aug-inlay-opacity: 0.7;
   --aug-tl: 50px;
   --aug-tr-extend1: 40%;
