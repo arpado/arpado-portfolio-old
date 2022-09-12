@@ -35,11 +35,6 @@
           rows="10"
         ></textarea>
       </label>
-      <!-- <input
-        type="hidden"
-        name="_next"
-        value="https://arpado.github.io/thanks.html"
-      /> -->
       <div
         type="submit"
         class="submit-btn"
@@ -65,13 +60,11 @@ export default {
   methods: {
     async submitForm() {
       try {
-      await document.forms[0].submit()
-        .then(
-          this.mainStore.openMessageModal('Your message has been sent!')
-        )
-        
+        await document.forms[0].submit();
+        this.mainStore.openMessageModal("Your message has been sent!");
+        document.querySelectorAll(".message-input").value = "";
       } catch (error) {
-          this.mainStore.openMessageModal(`Something went wrong: ${error}`)
+        this.mainStore.openMessageModal(`Something went wrong Dave: ${error}`);
       }
     },
   },
@@ -79,10 +72,31 @@ export default {
 </script>
 
 <style scoped>
+/* Suggestion Box BG, yet to solve it */
+/* input:-webkit-autofill {
+    background-color: white !important;
+    -webkit-box-shadow: 0 0 0 50px white inset;
+} */
+/* .message-input:-webkit-autofill,
+.message-input:-webkit-autofill:hover, 
+.message-input:-webkit-autofill:focus, 
+.message-input:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    box-shadow: 0 0 0 30px green inset !important;
+    -webkit-box-shadow: 0 0 0 30px green inset !important;
+    background-color: blue !important;
+} */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
 .message-container {
   min-height: 80vh;
-  height: fit-content;
-
   width: 80vw;
   display: grid;
   grid-template-rows: 1fr 11fr;
@@ -125,6 +139,9 @@ textarea {
   font-weight: 900;
   margin: 10px auto;
   text-align: center;
+  --aug-inlay-opacity: 0.9;
+  --aug-inlay-bg: black;
+  --aug-inlay-all: 0px;
 }
 .submit-btn:hover {
   cursor: pointer;
