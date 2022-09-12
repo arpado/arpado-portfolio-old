@@ -28,34 +28,20 @@
 </template>
 
 <script>
-// projectImage(content.image)
 // require(`~/public/images/${content.thumbnail}`)
-import { useMainStore } from "@/stores/MainStore.js"
-// import pic from `@/public/images/${this.content.thumbnail}`
-// let path = this.content.thumbnail
-// console.log(path)
-// import pic from path
-
+import { useMainStore } from "@/stores/MainStore.js";
 
 export default {
-  // data() {
-  //   return {
-  //     image: this.content.thumbnail,
-  //   }
-  // },
   props: ["content"],
   emits: ["openModal"],
   setup() {
     const mainStore = useMainStore();
     return { mainStore };
   },
-  // mounted() {
-  //   this.imgUrl = new URL(`~/public/images/${this.content.thumbnail}`)
-  // },
   computed: {
     getPics() {
       return "/images/" + this.content.thumbnail;
-    }
+    },
   },
 };
 </script>
@@ -72,7 +58,6 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
-  /* padding: 0.5rem; */
   font-size: 0.7rem;
 }
 .project-element:hover {
