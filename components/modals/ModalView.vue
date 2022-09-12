@@ -27,15 +27,6 @@
               </NuxtLayout>
             </div>
           </div>
-          <!-- <div class="project-image"> -->
-          <!-- <div
-    class="project-image"
-    data-augmented-ui="all-hex border"
-    @click="mainStore.openModal(content)"
-    v-else
-  > -->
-
-          <!-- </div> -->
           <div class="project-description">
             <p>Project description:</p>
             <p>{{ mainStore.modalContent.description }}</p>
@@ -89,11 +80,6 @@ export default {
     return { mainStore };
   },
   methods: {
-    // closeModalOnEscape(e) {
-    //   if (e.keyCode == 27) {
-    //     this.mainStore.closeModal();
-    //   }
-    // },
     openLink(link) {
       if (link !== "") {
         window.open(link, "_blank");
@@ -106,8 +92,8 @@ export default {
   },
   computed: {
     getPic() {
-      return "/images/" + this.mainStore.modalContent.image
-    }
+      return "/images/" + this.mainStore.modalContent.image;
+    },
   },
   mounted() {
     document.addEventListener("keydown", this.mainStore.closeModalOnEscape);
@@ -118,12 +104,10 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .img-container-2 {
   width: 100%;
   z-index: 0;
-  /* border: 30px solid black; */
-  /* background-color: var(--darkGreen); */
 }
 .modal-container {
   width: 100vw;
@@ -131,7 +115,6 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  /* color: white; */
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 998;
   display: flex;
@@ -207,6 +190,9 @@ export default {
   align-items: center;
   font-weight: 900;
   text-align: center;
+  --aug-inlay-opacity: 0.9;
+  --aug-inlay-bg: black;
+  --aug-inlay-all: 0px;
 }
 .project-link:hover {
   cursor: pointer;
@@ -223,6 +209,9 @@ export default {
   grid-row: 1/2;
   grid-column: 10/13;
   font-family: monospace;
+  --aug-inlay-opacity: 0.9;
+  --aug-inlay-bg: black;
+  --aug-inlay-all: 0px;
 }
 .modal-close:hover {
   cursor: pointer;
@@ -230,19 +219,6 @@ export default {
 .modal-close > p {
   transform: rotateZ(45deg);
 }
-/*.modalanimation-enter-active .modal-container,
-.modalanimation-leave-active .modal-container {
-    transition: all 0.3s linear;
-
-}
-.modalanimation-enter-from .modal-container,
-.modalanimation-leave-to .modal-container {
-  opacity: 0;
-}
-.modalanimation-enter-from .main-console,
-.modalanimation-leave-to .main-console {
-  transform: scaleX(0px);
-} */
 .modalanimation-enter-active,
 .modalanimation-leave-active {
   transition: all 0.3s linear;
@@ -294,6 +270,9 @@ export default {
     justify-content: center;
     align-items: center;
     font-weight: 900;
+    --aug-inlay-opacity: 0.9;
+    --aug-inlay-bg: black;
+    --aug-inlay-all: 0px;
   }
 }
 </style>
