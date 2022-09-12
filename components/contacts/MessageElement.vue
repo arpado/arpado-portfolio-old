@@ -104,7 +104,8 @@ select:-webkit-autofill {
   padding: 2rem 3rem;
   --aug-inlay-bg: var(--darkGreen);
   --aug-inlay-opacity: 0.7;
-  overflow: hidden;
+  --aug-tr-extend2: 30%;
+  --aug-l-extend1: 30%;
 }
 .title {
   grid-row: 1/2;
