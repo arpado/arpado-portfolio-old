@@ -54,8 +54,6 @@ export default {
 <style scoped>
 .about-container {
   min-height: 80vh;
-  /* height: fit-content; */
-  /* height: 80vh;*/
   width: 80vw; 
   display: grid;
   grid-template-rows: 1fr 11fr;
@@ -64,8 +62,6 @@ export default {
   --aug-inlay-opacity: 0.7;
   --aug-tl-extend1: 30%;
   --aug-r-extend1: 30%;
-  /* overflow-x: hidden;
-  overflow-y: auto; */
   overflow: hidden;
 }
 .title {
