@@ -4,15 +4,13 @@
     data-augmented-ui="
   bl-clip-x br-clip-x t-clip-x both
 "
-  @click="$emit('emitChangeSubPage', button.subPage)"
+    @click="$emit('emitChangeSubPage', button.subPage)"
   >
     <p>{{ button.name }}</p>
   </div>
 </template>
 
 <script>
-    // :style="{ transform: `translateY(${index * 100 + 50}px)` }"
-    //   :style="{ top: `${index * 100 + 50}px` }"
 export default {
   name: "DropdownItem",
   props: ["button", "index"],
@@ -38,6 +36,6 @@ export default {
   --aug-inlay-all: 0px;
 }
 .wrapper:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 </style>
